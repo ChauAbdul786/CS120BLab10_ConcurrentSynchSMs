@@ -30,9 +30,7 @@ void TimerOff(){
 	TCCR1B = 0x00; // Timer off
 }
 
-void TimerISR(){
-	TimerFlag = 1;
-}
+void TimerISR();
 
 // In our approach, C programmer does not touch this ISr, but rather TimerISR()
 ISR(TIMER1_COMPA_vect){
